@@ -317,15 +317,15 @@
 
             <div id="myContainer" style="height: 800px"></div>
 
-
             <script>
               (async () => {
                 // Create a viewer
-                window.myViewer = await window.Accusoft.PdfViewerControl.create({
-                  container: document.getElementById('myContainer'),
-                  // URL or Uint8Array for a PDF
-                  sourceDocument: './img/ceva_pdf.pdf'
-                });
+                window.myViewer = await window.Accusoft.PdfViewerControl.create(
+                  {
+                    container: document.getElementById("myContainer"),
+                    sourceDocument: "./assets/img/ceva_pdf.pdf",
+                  }
+                );
               })();
             </script>
           </div>
