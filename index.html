@@ -4,9 +4,11 @@
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
-    <title>Pro Security</title>
+    <title>Impact Trilogistic</title>
     <meta content="" name="description" />
     <meta content="" name="keywords" />
+
+    <script src="https://cdn.jsdelivr.net/npm/@accusoft/pdf-viewer@3/bundle.js"></script>
 
     <!-- Favicons -->
     <link href="assets/img/logo.png" rel="icon" />
@@ -48,7 +50,9 @@
       <div class="container d-flex justify-content-between align-items-center">
         <div class="logo">
           <h1 class="text-light">
-            <a href="index.html"><span>Pro Security</span></a>
+            <a href="index.html" class="logo_name"
+              ><span>Impact <span class="trilo">Trilogistic</span></span></a
+            >
           </h1>
         </div>
 
@@ -105,7 +109,12 @@
         <div class="carousel-item active">
           <div class="carousel-container">
             <h2 class="animate__animated animate__fadeInDown">
-              Welcome to <span>Pro Security</span>
+              Welcome to
+              <span>
+                <a href="index.html" class="logo_name"
+                  ><span>Impact <span class="trilo">Trilogistic</span></span></a
+                >
+              </span>
             </h2>
             <p class="animate__animated animate__fadeInUp">
               Alege azi un sistem inteligent de supraveghere.
@@ -274,7 +283,7 @@
       >
         <div class="container">
           <div class="row">
-            <div class="col-lg-6 video-box">
+            <!-- <div class="col-lg-6 video-box">
               <img src="assets/img/why-us.jpg" class="img-fluid" alt="" />
               <a
                 target="_blank"
@@ -304,7 +313,21 @@
                   beneficii din contract.
                 </p>
               </div>
-            </div>
+            </div> -->
+
+            <div id="myContainer" style="height: 800px"></div>
+
+
+            <script>
+              (async () => {
+                // Create a viewer
+                window.myViewer = await window.Accusoft.PdfViewerControl.create({
+                  container: document.getElementById('myContainer'),
+                  // URL or Uint8Array for a PDF
+                  sourceDocument: './img/ceva_pdf.pdf'
+                });
+              })();
+            </script>
           </div>
         </div>
       </section>
@@ -492,7 +515,7 @@
             </div>
 
             <div class="col-lg-3 col-md-6 footer-info">
-              <h3>ProSecurity</h3>
+              <h3>Impact <span>Trilogistic</span></h3>
               <p>
                 Alege întodeauna tehnologia de astăzi! Alege să lucrezi cu o
                 firmă ce știe ce sa îți prezinte! Alege
